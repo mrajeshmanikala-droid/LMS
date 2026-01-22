@@ -18,7 +18,4 @@ router.post("/borrow/request-issue/:bookid",userAuth,checkRole("user"),booksCont
 router.put("/return/:id",userAuth,checkRole("user"),booksController.returnBook)
 router.put("/returnrequest/:id",userAuth,checkRole("user"),booksController.requestReturnBook)
 
-
-
-
-module.exports = router 
+module.exports = router

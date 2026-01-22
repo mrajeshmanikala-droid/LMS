@@ -6,7 +6,7 @@ import { getAuthToken } from "../../utils/auth";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
 function ProfilePage() {
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(null);
   const [allBooks, setAllBooks] = useState([]);
   const [issuedBooks, setIssuedBooks] = useState([]);
   const [issuedRequests, setIssuedRequests] = useState([]);
@@ -14,7 +14,7 @@ function ProfilePage() {
 
   const fetchIssuedBooks = async () => {
     try {
-      const url = Server_URL + "books/issued";
+      const url = Server_URL + "api/books/issued";
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${getAuthToken()}` },
       });
@@ -48,7 +48,7 @@ function ProfilePage() {
   async function returnBook(borrowId) {
     try {
       const response = await axios.put(
-        `${Server_URL}books/returnrequest/${borrowId}`,
+        `${Server_URL}api/books/return/${borrowId}`,
         {},
         { headers: { Authorization: `Bearer ${getAuthToken()}` } }
       );
@@ -81,6 +81,8 @@ function ProfilePage() {
                 <thead>
                   <tr>
                     <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
                     <th>Issue Date</th>
                     <th>Due Date</th>
                     <th>Status</th>
@@ -91,7 +93,9 @@ function ProfilePage() {
                 <tbody>
                   {issuedBooks.map((book) => (
                     <tr key={book._id}>
-                      <td>{book.bookId.title}</td>
+                      <td>{book.bookId?.title || "N/A"}</td>
+                      <td>{book.bookId?.author || "N/A"}</td>
+                      <td>{book.bookId?.category || "N/A"}</td>
                       <td>{new Date(book.issueDate).toLocaleDateString()}</td>
                       <td>{new Date(book.dueDate).toLocaleDateString()}</td>
                       <td><span className="badge issued">{book.status}</span></td>
@@ -101,7 +105,7 @@ function ProfilePage() {
                           className="return-btn"
                           onClick={() => returnBook(book._id)}
                         >
-                          Request Return
+                          Return Book
                         </button>
                       </td>
                     </tr>
@@ -120,6 +124,8 @@ function ProfilePage() {
                 <thead>
                   <tr>
                     <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
                     <th>Request Date</th>
                     <th>Due Date</th>
                     <th>Status</th>
@@ -128,7 +134,9 @@ function ProfilePage() {
                 <tbody>
                   {issuedRequests.map((book) => (
                     <tr key={book._id}>
-                      <td>{book.bookId.title}</td>
+                      <td>{book.bookId?.title || "N/A"}</td>
+                      <td>{book.bookId?.author || "N/A"}</td>
+                      <td>{book.bookId?.category || "N/A"}</td>
                       <td>{new Date(book.issueDate).toLocaleDateString()}</td>
                       <td>{new Date(book.dueDate).toLocaleDateString()}</td>
                       <td><span className="badge requested">{book.status}</span></td>
@@ -148,6 +156,8 @@ function ProfilePage() {
                 <thead>
                   <tr>
                     <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
                     <th>Request Date</th>
                     <th>Due Date</th>
                     <th>Status</th>
@@ -156,8 +166,10 @@ function ProfilePage() {
                 <tbody>
                   {returnRequests.map((book) => (
                     <tr key={book._id}>
-                      <td>{book.bookId.title}</td>
-                      <td>{new Date(book.issueDate).toLocaleDateString()}</td>
+                      <td>{book.bookId?.title || "N/A"}</td>
+                      <td>{book.bookId?.author || "N/A"}</td>
+                      <td>{book.bookId?.category || "N/A"}</td>
+                      <td>{new Date(book.updatedAt).toLocaleDateString()}</td>
                       <td>{new Date(book.dueDate).toLocaleDateString()}</td>
                       <td><span className="badge return-requested">{book.status}</span></td>
                     </tr>

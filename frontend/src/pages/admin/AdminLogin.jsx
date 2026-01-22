@@ -24,7 +24,7 @@ const AdminLogin = () => {
           showSuccessToast("Login Successful!");
           navigate("/admin")
                 
-          localStorage.setItem("adminauthToken", response.data.token);
+          localStorage.setItem("authToken", response.data.token);
           
   
         } catch (error) {

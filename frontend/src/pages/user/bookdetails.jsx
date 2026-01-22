@@ -16,6 +16,7 @@ function BookDetails() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [isIssuing, setIsIssuing] = useState(false);
+    const [issuedBooks, setIssuedBooks] = useState([]);
 
     // async function issueBook(bookid) {
     //     try {
@@ -58,7 +59,7 @@ function BookDetails() {
             return;
         }
            const url =Server_URL + 'borrow/request-issue/'+bookid;
-           const response = await axios.post(`${Server_URL}books/borrow/request-issue/${bookid}`,{}, {
+           const response = await axios.post(`${Server_URL}api/books/borrow/request-issue/${bookid}`,{}, {
             headers: {
               Authorization: `Bearer ${authToken}`,
             },
@@ -84,7 +85,7 @@ function BookDetails() {
         async function fetchBook() {
             try {
                 setIsLoading(true);
-                const response = await axios.get(`${Server_URL}books/${id}`);
+                const response = await axios.get(`${Server_URL}api/books/${id}`);
                 setBook(response.data);
                 setError(null);
             } catch (error) {
@@ -96,6 +97,25 @@ function BookDetails() {
         }
         fetchBook();
     }, [id]);
+
+    useEffect(() => {
+        async function fetchIssuedBooks() {
+            try {
+                const authToken = localStorage.getItem("authToken");
+                if (authToken) {
+                    const response = await axios.get(`${Server_URL}api/books/issued`, {
+                        headers: {
+                            Authorization: `Bearer ${authToken}`,
+                        },
+                    });
+                    setIssuedBooks(response.data.issuedBooks || []);
+                }
+            } catch (error) {
+                console.error("Error fetching issued books:", error);
+            }
+        }
+        fetchIssuedBooks();
+    }, []);
 
     if (isLoading) return (
         <div className="loading-container">
@@ -139,13 +159,13 @@ function BookDetails() {
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                    <img 
-                        src={book.coverImage || '/default-book-cover.jpg'} 
-                        alt={book.title} 
+                    <img
+                        src={book.coverImage ? `${Server_URL}${book.coverImage.replace(/^\//, '')}` : "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYm9va0dyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2N0VlYTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzY0YmEyO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CgogIDxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiBmaWxsPSJ1cmwoI2Jvb2tHcmFkaWVudCkiIHJ4PSI4IiByeT0iOCIvPgogIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjI3MCIgaGVpZ2h0PSI0MjAiIGZpbGw9IiNmZmZmZmYiIHJ4PSI0IiByeT0iNCIgc3Ryb2tlPSIjZTBlMGUwIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjEwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzJjM2U1MCI+Qm9vayBUaXRsZTwvdGV4dD4KICA8dGV4dCB4PSIxNTAiIHk9IjEzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjN2Y4YzhkIj5ieSBBdXRob3IgTmFtZTwvdGV4dD4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIyNTAiIHI9IjQwIiBmaWxsPSIjMzQ5OGRiIiBvcGFjaXR5PSIwLjEiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIyNTAiIHI9IjI1IiBmaWxsPSIjMzQ5OGRiIiBvcGFjaXR5PSIwLjIiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIyNTAiIHI9IjE1IiBmaWxsPSIjMzQ5OGRiIiBvcGFjaXR5PSIwLjMiLz4KICA8cmVjdCB4PSI2MCIgeT0iMzMwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZWNmMGYxIiByeD0iMTUiIHJ5PSIxNSIvPgogIDx0ZXh0IHg9IjE1MCIgeT0iMzQ4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzNDQ5NWUiPkZJQ1RJT048L3RleHQ+CiAgPHRleHQgeD0iMTUwIiB5PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM5NWE1YTYiPklTQk46IDk3OC0wLTEyMzQ1Ni03OC05PC90ZXh0PgogIDxyZWN0IHg9IjEwMCIgeT0iNDEwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjZjhmOWZhIiByeD0iNCIgcnk9IjQiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjQzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSIjN2Y4YzhkIj5Cb29rTmVzdDwvdGV4dD4KPC9zdmc+"}
+                        alt={book.title}
                         className="book-image"
                         onError={(e) => {
                             e.target.onerror = null;
-                            e.target.src = '/default-book-cover.jpg';
+                            e.target.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYm9va0dyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2N0VlYTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzY0YmEyO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CgogIDxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiBmaWxsPSJ1cmwoI2Jvb2tHcmFkaWVudCkiIHJ4PSI4IiByeT0iOCIvPgogIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjI3MCIgaGVpZ2h0PSI0MjAiIGZpbGw9IiNmZmZmZmYiIHJ4PSI0IiByeT0iNCIgc3Ryb2tlPSIjZTBlMGUwIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjEwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzJjM2U1MCI+Qm9vayBUaXRsZTwvdGV4dD4KICA8dGV4dCB4PSIxNTAiIHk9IjEzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjN2Y4YzhkIj5ieSBBdXRob3IgTmFtZTwvdGV4dD4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIyNTAiIHI9IjQwIiBmaWxsPSIjMzQ5OGRiIiBvcGFjaXR5PSIwLjEiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIyNTAiIHI9IjI1IiBmaWxsPSIjMzQ5OGRiIiBvcGFjaXR5PSIwLjIiLz4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIyNTAiIHI9IjE1IiBmaWxsPSIjMzQ5OGRiIiBvcGFjaXR5PSIwLjMiLz4KICA8cmVjdCB4PSI2MCIgeT0iMzMwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZWNmMGYxIiByeD0iMTUiIHJ5PSIxNSIvPgogIDx0ZXh0IHg9IjE1MCIgeT0iMzQ4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzNDQ5NWUiPkZJQ1RJT048L3RleHQ+CiAgPHRleHQgeD0iMTUwIiB5PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM5NWE1YTYiPklTQk46IDk3OC0wLTEyMzQ1Ni03OC05PC90ZXh0PgogIDxyZWN0IHg9IjEwMCIgeT0iNDEwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjZjhmOWZhIiByeD0iNCIgcnk9IjQiLz4KICA8dGV4dCB4PSIxNTAiIHk9IjQzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSIjN2Y4YzhkIj5Cb29rTmVzdDwvdGV4dD4KPC9zdmc+";
                         }}
                     />
                     {book.availableCopies !== undefined && (
@@ -196,23 +216,36 @@ function BookDetails() {
                     </div>
                     
                     <div className="action-buttons">
-                        <motion.button 
-                            className={`issue-button ${book.availableCopies !== undefined && book.availableCopies <= 0 ? 'disabled' : ''}`}
-                            onClick={() => issueBook(book._id)}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            disabled={book.availableCopies !== undefined && book.availableCopies <= 0}
-                        >
-                            {isIssuing ? (
-                                <span className="button-loader"></span>
-                            ) : (
-                                <>
-                                    <FaBookOpen className="button-icon" />
-                                    {book.availableCopies !== undefined && book.availableCopies <= 0 ? 
-                                        "Out of Stock" : "Issue This Book"}
-                                </>
-                            )}
-                        </motion.button>
+                        {(() => {
+                            const isAlreadyRequested = issuedBooks.some(issuedBook => issuedBook.bookId._id === book._id);
+                            const hasMaxBooks = issuedBooks.length >= 4;
+                            const isOutOfStock = book.availableCopies !== undefined && book.availableCopies <= 0;
+                            const isDisabled = isAlreadyRequested || hasMaxBooks || isOutOfStock;
+
+                            let buttonText = "Request to Issue";
+                            if (isOutOfStock) buttonText = "Out of Stock";
+                            else if (isAlreadyRequested) buttonText = "Already Requested";
+                            else if (hasMaxBooks) buttonText = "Max Books Reached";
+
+                            return (
+                                <motion.button
+                                    className={`issue-button ${isDisabled ? 'disabled' : ''}`}
+                                    onClick={() => issueBook(book._id)}
+                                    whileHover={isDisabled ? {} : { scale: 1.05 }}
+                                    whileTap={isDisabled ? {} : { scale: 0.95 }}
+                                    disabled={isDisabled}
+                                >
+                                    {isIssuing ? (
+                                        <span className="button-loader"></span>
+                                    ) : (
+                                        <>
+                                            <FaBookOpen className="button-icon" />
+                                            {buttonText}
+                                        </>
+                                    )}
+                                </motion.button>
+                            );
+                        })()}
                     </div>
                 </div>
             </div>

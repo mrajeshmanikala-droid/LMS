@@ -1,39 +1,46 @@
-const  {UserModel} = require("../model/UserModel");
+const  UserModel = require("../model/UserModel");
 const  {ContactModel} = require("../model/ContactModel");
 const nodemailer = require("nodemailer");
 const bcrypt = require("bcryptjs");
-const JWT_SECRET = "12345@abcd12";
 const jwt = require("jsonwebtoken");
 const {OtpModel} = require("../model/OtpModel");
 const userController = {};
 
 userController.userRegistration = async (req, res) => {
-    try {
-        const { name, email, password, stream, year,role } = req.body;
-        const existingUser = await UserModel.findOne({ email });
-        if (existingUser) {
-            return res.status(400).json({ message: "Email already exists" });
-        }
+  try {
+    const { name, email, password, stream, year, role } = req.body;
 
-        const hashedPassword = await bcrypt.hash(password, 10);
+    // Validate role
+    const validRoles = ["user", "librarian", "admin"];
+    const userRole = role && validRoles.includes(role) ? role : "user";
 
-        const user = new UserModel({
-            name,
+    const existingUser = await UserModel.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: "Email already exists" });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const user = new UserModel({
+      name,
       email,
       password: hashedPassword,
-      stream,
-      year,
-      role
-        });
-// console.log(user);
-        await user.save();
+      stream: userRole === "user" ? stream : undefined,
+      year: userRole === "user" ? year : undefined,
+      role: userRole
+    });
 
-        res.status(201).json({ message: "User registered successfully" });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: "Internal Server Error" });
-    }
+    await user.save();
+
+    res.status(201).json({ message: `${userRole.charAt(0).toUpperCase() + userRole.slice(1)} registered successfully` });
+  } catch (error) {
+  console.error(error);
+  res.status(500).json({ message: error.message });
 }
+
+};
+
+
 
 userController.login = async (req,res)=>{
 
@@ -59,7 +66,7 @@ userController.login = async (req,res)=>{
             name: user.name,
             role: user.role
           };
-          const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "24h" });
+          const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "24h" });
           res.json({ message: "Login successful", token, user: { name: user.name, email: user.email, role: user.role } });
         //   res.json({ message: "Login successful"});
         
@@ -106,6 +113,25 @@ userController.addContact = async(req,res) => {
     await newContact.save();
     console.log('📩 Contact saved to DB:', newContact);
 
+    // Send email notification to admin
+    const adminEmail = process.env.EMAIL_USER; // Admin email
+    if (adminEmail) {
+      await transporter.sendMail({
+        from: process.env.EMAIL_USER,
+        to: adminEmail,
+        subject: `New Contact Form Submission: ${subject}`,
+        html: `
+          <h3>New Contact Form Message</h3>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message}</p>
+        `,
+      });
+      console.log('📧 Admin notification sent');
+    }
+
     res.status(200).json({ success: true, message: 'Your message has been sent! We will get back to you soon.' });
   } catch (error) {
     console.error('Error saving contact:', error.message);
@@ -138,7 +164,7 @@ userController.forgotPassword = async (req, res) => {
     );
 
     await transporter.sendMail({
-      from: process.env.EMAIL,
+      from: process.env.EMAIL_USER,
       to: email,
       subject: "Your OTP for Password Reset",
       html: `<p>Your OTP is <strong>${otp}</strong>. It is valid for 10 minutes.</p>`,

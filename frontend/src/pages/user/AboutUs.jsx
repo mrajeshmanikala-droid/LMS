@@ -9,8 +9,8 @@ const AboutUs = () => {
     
       <section className="about-hero-section">
         <div className="about-container">
-          <h1 className="about-hero-title">About Our College Library</h1>
-          <p className="about-hero-subtitle">Discover the heart of academic excellence at our institution</p>
+          <h1 className="about-hero-title">About BookNest</h1>
+          <p className="about-hero-subtitle">Discover the heart of academic excellence at our library</p>
         </div>
       </section>
 
@@ -21,7 +21,7 @@ const AboutUs = () => {
             <div className="about-mission-text">
               <h2 className="about-section-title">Our Mission</h2>
               <p className="about-mission-paragraph">
-                The College Library is dedicated to supporting the academic and research needs of our students and faculty. 
+                BookNest is dedicated to supporting the academic and research needs of our students and faculty. 
                 We strive to provide equitable access to information resources, foster information literacy, and create 
                 an environment conducive to learning and intellectual growth.
               </p>
@@ -38,7 +38,7 @@ const AboutUs = () => {
       </section>
 
     
-      <section className="about-history-section">
+      {/* <section className="about-history-section">
         <div className="about-container">
           <h2 className="about-section-title about-history-title">Our History</h2>
           <div className="about-timeline">
@@ -101,10 +101,10 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       
-      <section className="about-facilities-section">
+      {/* <section className="about-facilities-section">
         <div className="about-container">
           <h2 className="about-section-title">Our Facilities</h2>
           <div className="about-facilities-grid">
@@ -125,7 +125,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="about-cta-section">

@@ -1,6 +1,5 @@
 const  {UserModel} = require("../model/UserModel");
 const bcrypt = require("bcryptjs");
-const JWT_SECRET = "12345@abcd12";
 const jwt = require("jsonwebtoken");
 const adminController = {};
 
@@ -59,7 +58,7 @@ adminController.login = async (req,res)=>{
             name: user.name,
             role: user.role,
           };
-          const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "24h" });
+          const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "24h" });
           res.json({ message: "Login successful", token, user: { name: user.name, email: user.email, role: user.role } });
         //   res.json({ message: "Login successful"});
         

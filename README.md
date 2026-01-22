@@ -1,4 +1,4 @@
-# 📚 Library Management System (MERN Stack)
+# 📚 BookNest (MERN Stack)
 
 ![MERN Stack](https://img.shields.io/badge/MERN-Full%20Stack-blue)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://library-management-app-karan.vercel.app/)

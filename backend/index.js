@@ -1,46 +1,54 @@
-const express = require('express'); 
-const app = express(); 
-const cors = require('cors'); 
+const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
-require('dotenv').config();
-const users = require("./routes/user.js") 
-const books = require("./routes/books.js")
-const admin = require("./routes/admin.js")
-const librarian = require("./routes/librarian.js")
-const home = require("./routes/home.js")
+require("dotenv").config();
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://library-management-app-karan.vercel.app",
-];
+const users = require("./routes/user.js");
+const books = require("./routes/books.js");
+const admin = require("./routes/admin.js");
+const librarian = require("./routes/librarian.js");
+const home = require("./routes/home.js");
 
-app.use(express.json()); // Parse JSON
+const app = express();
+
+// ✅ Middlewares
+app.use(express.json());
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (origin.startsWith('http://localhost:')) {
+      return callback(null, true);
     }
+    return callback(new Error('Not allowed by CORS'));
   },
-  credentials: true,
+  method:["POST","GET","PUT","DELETE","OPTIONS"],
+  credentials: true
 }));
-app.use("/users",users);
-app.use("/books",books);
-app.use("/admin",admin);
-app.use("/librarian",librarian);
-app.use("/home",home);
+
+// ✅ Routes
+app.use("/users", users);
+app.use("/api/books", books);
+app.use("/admin", admin);
+app.use("/librarian", librarian);
+app.use("/home", home);
 
 app.get("/", (req, res) => {
-    res.send("API is running...");
-  });
-  
-  const PORT = process.env.PORT || 5000;
+  res.send("API is running...");
+});
+
+// ✅ MongoDB FIRST, server AFTER
+const PORT = process.env.PORT || 5001;
 const uri = process.env.MONGO_URI;
 
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
-     mongoose.connect(uri);
-     
-     console.log("DB Connected")
+mongoose
+  .connect(uri)
+  .then(() => {
+    console.log("✅ MongoDB Connected");
+    app.listen(PORT, () => {
+      console.log(` Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error(" MongoDB connection error:", err);
   });

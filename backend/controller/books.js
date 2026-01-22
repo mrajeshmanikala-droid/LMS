@@ -1,9 +1,10 @@
 const booksController = {};
 const { BookModel } = require("../model/BookModel");
 const {BorrowModel} = require("../model/BorrowModel")
-const cloudinary = require("cloudinary").v2;
 const calculateFine = require("../utils/fineCalculator")
 const { clearCache } = require("../utils/cache");
+const path = require("path");
+const fs = require("fs");
 
 
 booksController.addNewBook = async (req, res) => {
@@ -13,9 +14,7 @@ booksController.addNewBook = async (req, res) => {
       author,
       category,
       isbn,
-      availableCopies,
       totalCopies,
-      coverImage,
       price,
       description,
     } = req.body;
@@ -28,11 +27,9 @@ booksController.addNewBook = async (req, res) => {
         .status(400)
         .json({error:true, message: "Book with this ISBN already exists" });
     }
-    console.log("req.file")
     console.log(req.file)
 
     let coverImageUrl = req.file ? req.file.path : "";
-    let cloudinaryId = req.file ? req.file.filename : "";
     console.log(coverImageUrl);
 
     const newBook = new BookModel({
@@ -40,12 +37,11 @@ booksController.addNewBook = async (req, res) => {
       author,
       category,
       isbn,
-      availableCopies: totalCopies,
-      totalCopies,
+      availableCopies: Number(totalCopies),
+      totalCopies: Number(totalCopies),
       addedBy:id,
       coverImage:coverImageUrl,
-      cloudinaryId: cloudinaryId,
-      price,
+      price: Number(price),
       description,
     });
 
@@ -184,9 +180,15 @@ booksController.deleteBook = async (req, res) => {
   try {
     const book = await BookModel.findById(req.params.id);
     if (!book) return res.status(404).json({ error: true, message: "Book not found" });
-    if (book.cloudinaryId) {
-      await cloudinary.uploader.destroy(book.cloudinaryId);
+
+    // Delete the cover image from Cloudinary if it exists
+    if (book.coverImage) {
+      // Extract public_id from Cloudinary URL
+      const publicId = book.coverImage.split('/').pop().split('.')[0];
+      const cloudinary = require('cloudinary').v2;
+      await cloudinary.uploader.destroy(`library-book-covers/${publicId}`);
     }
+
     await BookModel.findByIdAndDelete(req.params.id);
     clearCache("homeData");
     res.status(200).json({ message: "Book Deleted Successfully" });
@@ -345,7 +347,7 @@ booksController.getIssuedBooks = async (req, res) => {
       });
     }
 
-    const booksWithFine = issuedBooks.map(book => {
+    const booksWithFine = issuedBooks.filter(book => book.bookId).map(book => {
       const fine = calculateFine(book.dueDate, book.returnDate); // returnDate may be null
       return { ...book.toObject(), fine };
     });

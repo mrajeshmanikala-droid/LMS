@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Server_URL } from "../../utils/config";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
+import { categories } from "../../utils/categories";
 
 
 const AddBookForm = () => {
@@ -30,7 +31,7 @@ const AddBookForm = () => {
       }
   
       const authToken = localStorage.getItem("authToken");
-      const url = Server_URL + "books/add";
+      const url = Server_URL + "api/books/add";
   
       const response = await axios.post(url, formData, {
         headers: {
@@ -83,10 +84,11 @@ const AddBookForm = () => {
           <label className="form-label">Category</label>
           <select className="form-select" {...register("category", { required: "Category is required" })}>
             <option value="">Select Category</option>
-            <option value="Fiction">Fiction</option>
-            <option value="Non-fiction">Non-fiction</option>
-            <option value="Science">Science</option>
-            <option value="History">History</option>
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
           </select>
           {errors.category && <small className="text-danger">{errors.category.message}</small>}
         </div>

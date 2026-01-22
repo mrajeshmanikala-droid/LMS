@@ -1,0 +1,1352 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "category": "Fiction",
+    "isbn": "978521695378",
+    "description": "A captivating book titled \"The Great Gatsby\" by F. Scott Fitzgerald, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "To Kill a Mockingbird 2",
+    "author": "Harper Lee",
+    "category": "Fiction",
+    "isbn": "978353247112",
+    "description": "A captivating book titled \"To Kill a Mockingbird 2\" by Harper Lee, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 12,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "1984 3",
+    "author": "George Orwell",
+    "category": "Fiction",
+    "isbn": "978258583328",
+    "description": "A captivating book titled \"1984 3\" by George Orwell, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Pride and Prejudice 4",
+    "author": "Jane Austen",
+    "category": "Fiction",
+    "isbn": "978930107257",
+    "description": "A captivating book titled \"Pride and Prejudice 4\" by Jane Austen, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "category": "Non-Fiction",
+    "isbn": "978343312229",
+    "description": "A captivating book titled \"The Catcher in the Rye\" by J.D. Salinger, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Hobbit 2",
+    "author": "J.R.R. Tolkien",
+    "category": "Non-Fiction",
+    "isbn": "978262274852",
+    "description": "A captivating book titled \"The Hobbit 2\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 13,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lord of the Rings 3",
+    "author": "J.R.R. Tolkien",
+    "category": "Non-Fiction",
+    "isbn": "978470326838",
+    "description": "A captivating book titled \"The Lord of the Rings 3\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone 4",
+    "author": "J.K. Rowling",
+    "category": "Non-Fiction",
+    "isbn": "978776436960",
+    "description": "A captivating book titled \"Harry Potter and the Sorcerer's Stone 4\" by J.K. Rowling, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "category": "Mystery",
+    "isbn": "978216471346",
+    "description": "A captivating book titled \"The Da Vinci Code\" by Dan Brown, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Gone Girl 2",
+    "author": "Gillian Flynn",
+    "category": "Mystery",
+    "isbn": "978716546820",
+    "description": "A captivating book titled \"Gone Girl 2\" by Gillian Flynn, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Notebook 3",
+    "author": "Nicholas Sparks",
+    "category": "Mystery",
+    "isbn": "978959088607",
+    "description": "A captivating book titled \"The Notebook 3\" by Nicholas Sparks, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Dune 4",
+    "author": "Frank Herbert",
+    "category": "Mystery",
+    "isbn": "978670561129",
+    "description": "A captivating book titled \"Dune 4\" by Frank Herbert, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Neuromancer",
+    "author": "William Gibson",
+    "category": "Thriller",
+    "isbn": "978785404997",
+    "description": "A captivating book titled \"Neuromancer\" by William Gibson, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 2,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Name of the Wind 2",
+    "author": "Patrick Rothfuss",
+    "category": "Thriller",
+    "isbn": "978280095634",
+    "description": "A captivating book titled \"The Name of the Wind 2\" by Patrick Rothfuss, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Steve Jobs 3",
+    "author": "Walter Isaacson",
+    "category": "Thriller",
+    "isbn": "978465633378",
+    "description": "A captivating book titled \"Steve Jobs 3\" by Walter Isaacson, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Sapiens 4",
+    "author": "Yuval Noah Harari",
+    "category": "Thriller",
+    "isbn": "978478451824",
+    "description": "A captivating book titled \"Sapiens 4\" by Yuval Noah Harari, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Educated",
+    "author": "Tara Westover",
+    "category": "Romance",
+    "isbn": "978795112049",
+    "description": "A captivating book titled \"Educated\" by Tara Westover, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Atomic Habits 2",
+    "author": "James Clear",
+    "category": "Romance",
+    "isbn": "978361827961",
+    "description": "A captivating book titled \"Atomic Habits 2\" by James Clear, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 3,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Alchemist 3",
+    "author": "Paulo Coelho",
+    "category": "Romance",
+    "isbn": "978909806910",
+    "description": "A captivating book titled \"The Alchemist 3\" by Paulo Coelho, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 11,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Power of Now 4",
+    "author": "Eckhart Tolle",
+    "category": "Romance",
+    "isbn": "978850546994",
+    "description": "A captivating book titled \"The Power of Now 4\" by Eckhart Tolle, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 3,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Road Less Traveled",
+    "author": "M. Scott Peck",
+    "category": "Science Fiction",
+    "isbn": "978019766149",
+    "description": "A captivating book titled \"The Road Less Traveled\" by M. Scott Peck, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 12,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck 2",
+    "author": "Mark Manson",
+    "category": "Science Fiction",
+    "isbn": "978378551629",
+    "description": "A captivating book titled \"The Subtle Art of Not Giving a F*ck 2\" by Mark Manson, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Thinking, Fast and Slow 3",
+    "author": "Daniel Kahneman",
+    "category": "Science Fiction",
+    "isbn": "978084439862",
+    "description": "A captivating book titled \"Thinking, Fast and Slow 3\" by Daniel Kahneman, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 14,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lean Startup 4",
+    "author": "Eric Ries",
+    "category": "Science Fiction",
+    "isbn": "978365953714",
+    "description": "A captivating book titled \"The Lean Startup 4\" by Eric Ries, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 13,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "category": "Fantasy",
+    "isbn": "978220519360",
+    "description": "A captivating book titled \"How to Win Friends and Influence People\" by Dale Carnegie, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Great Gatsby 2",
+    "author": "F. Scott Fitzgerald",
+    "category": "Fantasy",
+    "isbn": "978655835448",
+    "description": "A captivating book titled \"The Great Gatsby 2\" by F. Scott Fitzgerald, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "To Kill a Mockingbird 3",
+    "author": "Harper Lee",
+    "category": "Fantasy",
+    "isbn": "978860544308",
+    "description": "A captivating book titled \"To Kill a Mockingbird 3\" by Harper Lee, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "1984 4",
+    "author": "George Orwell",
+    "category": "Fantasy",
+    "isbn": "978791575933",
+    "description": "A captivating book titled \"1984 4\" by George Orwell, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "category": "Biography",
+    "isbn": "978236387963",
+    "description": "A captivating book titled \"Pride and Prejudice\" by Jane Austen, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Catcher in the Rye 2",
+    "author": "J.D. Salinger",
+    "category": "Biography",
+    "isbn": "978864044104",
+    "description": "A captivating book titled \"The Catcher in the Rye 2\" by J.D. Salinger, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Hobbit 3",
+    "author": "J.R.R. Tolkien",
+    "category": "Biography",
+    "isbn": "978827982559",
+    "description": "A captivating book titled \"The Hobbit 3\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lord of the Rings 4",
+    "author": "J.R.R. Tolkien",
+    "category": "Biography",
+    "isbn": "978813952448",
+    "description": "A captivating book titled \"The Lord of the Rings 4\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "category": "History",
+    "isbn": "978623341078",
+    "description": "A captivating book titled \"Harry Potter and the Sorcerer's Stone\" by J.K. Rowling, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Da Vinci Code 2",
+    "author": "Dan Brown",
+    "category": "History",
+    "isbn": "978436937646",
+    "description": "A captivating book titled \"The Da Vinci Code 2\" by Dan Brown, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Gone Girl 3",
+    "author": "Gillian Flynn",
+    "category": "History",
+    "isbn": "978779239562",
+    "description": "A captivating book titled \"Gone Girl 3\" by Gillian Flynn, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 11,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Notebook 4",
+    "author": "Nicholas Sparks",
+    "category": "History",
+    "isbn": "978090523245",
+    "description": "A captivating book titled \"The Notebook 4\" by Nicholas Sparks, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "category": "Self-Help",
+    "isbn": "978937223935",
+    "description": "A captivating book titled \"Dune\" by Frank Herbert, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 13,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Neuromancer 2",
+    "author": "William Gibson",
+    "category": "Self-Help",
+    "isbn": "978339753989",
+    "description": "A captivating book titled \"Neuromancer 2\" by William Gibson, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Name of the Wind 3",
+    "author": "Patrick Rothfuss",
+    "category": "Self-Help",
+    "isbn": "978288075914",
+    "description": "A captivating book titled \"The Name of the Wind 3\" by Patrick Rothfuss, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Steve Jobs 4",
+    "author": "Walter Isaacson",
+    "category": "Self-Help",
+    "isbn": "978763413581",
+    "description": "A captivating book titled \"Steve Jobs 4\" by Walter Isaacson, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "category": "Horror",
+    "isbn": "978428993600",
+    "description": "A captivating book titled \"Sapiens\" by Yuval Noah Harari, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Educated 2",
+    "author": "Tara Westover",
+    "category": "Horror",
+    "isbn": "978227083438",
+    "description": "A captivating book titled \"Educated 2\" by Tara Westover, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 12,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Atomic Habits 3",
+    "author": "James Clear",
+    "category": "Horror",
+    "isbn": "978044035372",
+    "description": "A captivating book titled \"Atomic Habits 3\" by James Clear, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Alchemist 4",
+    "author": "Paulo Coelho",
+    "category": "Horror",
+    "isbn": "978562515811",
+    "description": "A captivating book titled \"The Alchemist 4\" by Paulo Coelho, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 2,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Power of Now",
+    "author": "Eckhart Tolle",
+    "category": "Children's",
+    "isbn": "978358099508",
+    "description": "A captivating book titled \"The Power of Now\" by Eckhart Tolle, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Road Less Traveled 2",
+    "author": "M. Scott Peck",
+    "category": "Children's",
+    "isbn": "978393390862",
+    "description": "A captivating book titled \"The Road Less Traveled 2\" by M. Scott Peck, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck 3",
+    "author": "Mark Manson",
+    "category": "Children's",
+    "isbn": "978682961815",
+    "description": "A captivating book titled \"The Subtle Art of Not Giving a F*ck 3\" by Mark Manson, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Thinking, Fast and Slow 4",
+    "author": "Daniel Kahneman",
+    "category": "Children's",
+    "isbn": "978037512193",
+    "description": "A captivating book titled \"Thinking, Fast and Slow 4\" by Daniel Kahneman, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lean Startup",
+    "author": "Eric Ries",
+    "category": "Poetry",
+    "isbn": "978141311548",
+    "description": "A captivating book titled \"The Lean Startup\" by Eric Ries, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "How to Win Friends and Influence People 2",
+    "author": "Dale Carnegie",
+    "category": "Poetry",
+    "isbn": "978361606057",
+    "description": "A captivating book titled \"How to Win Friends and Influence People 2\" by Dale Carnegie, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Great Gatsby 3",
+    "author": "F. Scott Fitzgerald",
+    "category": "Poetry",
+    "isbn": "978095528416",
+    "description": "A captivating book titled \"The Great Gatsby 3\" by F. Scott Fitzgerald, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "To Kill a Mockingbird 4",
+    "author": "Harper Lee",
+    "category": "Poetry",
+    "isbn": "978025835332",
+    "description": "A captivating book titled \"To Kill a Mockingbird 4\" by Harper Lee, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "category": "Drama",
+    "isbn": "978826092982",
+    "description": "A captivating book titled \"1984\" by George Orwell, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 12,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Pride and Prejudice 2",
+    "author": "Jane Austen",
+    "category": "Drama",
+    "isbn": "978195133883",
+    "description": "A captivating book titled \"Pride and Prejudice 2\" by Jane Austen, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Catcher in the Rye 3",
+    "author": "J.D. Salinger",
+    "category": "Drama",
+    "isbn": "978492733504",
+    "description": "A captivating book titled \"The Catcher in the Rye 3\" by J.D. Salinger, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 3,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Hobbit 4",
+    "author": "J.R.R. Tolkien",
+    "category": "Drama",
+    "isbn": "978586135968",
+    "description": "A captivating book titled \"The Hobbit 4\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "category": "Adventure",
+    "isbn": "978941776920",
+    "description": "A captivating book titled \"The Lord of the Rings\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone 2",
+    "author": "J.K. Rowling",
+    "category": "Adventure",
+    "isbn": "978187262001",
+    "description": "A captivating book titled \"Harry Potter and the Sorcerer's Stone 2\" by J.K. Rowling, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Da Vinci Code 3",
+    "author": "Dan Brown",
+    "category": "Adventure",
+    "isbn": "978899612556",
+    "description": "A captivating book titled \"The Da Vinci Code 3\" by Dan Brown, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Gone Girl 4",
+    "author": "Gillian Flynn",
+    "category": "Adventure",
+    "isbn": "978258505310",
+    "description": "A captivating book titled \"Gone Girl 4\" by Gillian Flynn, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Notebook",
+    "author": "Nicholas Sparks",
+    "category": "Comedy",
+    "isbn": "978373064578",
+    "description": "A captivating book titled \"The Notebook\" by Nicholas Sparks, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 1,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Dune 2",
+    "author": "Frank Herbert",
+    "category": "Comedy",
+    "isbn": "978731551707",
+    "description": "A captivating book titled \"Dune 2\" by Frank Herbert, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 14,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Neuromancer 3",
+    "author": "William Gibson",
+    "category": "Comedy",
+    "isbn": "978149913804",
+    "description": "A captivating book titled \"Neuromancer 3\" by William Gibson, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 1,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Name of the Wind 4",
+    "author": "Patrick Rothfuss",
+    "category": "Comedy",
+    "isbn": "978012329469",
+    "description": "A captivating book titled \"The Name of the Wind 4\" by Patrick Rothfuss, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "category": "Tragedy",
+    "isbn": "978919664431",
+    "description": "A captivating book titled \"Steve Jobs\" by Walter Isaacson, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 1,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Sapiens 2",
+    "author": "Yuval Noah Harari",
+    "category": "Tragedy",
+    "isbn": "978859273183",
+    "description": "A captivating book titled \"Sapiens 2\" by Yuval Noah Harari, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Educated 3",
+    "author": "Tara Westover",
+    "category": "Tragedy",
+    "isbn": "978993432237",
+    "description": "A captivating book titled \"Educated 3\" by Tara Westover, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Atomic Habits 4",
+    "author": "James Clear",
+    "category": "Tragedy",
+    "isbn": "978952028527",
+    "description": "A captivating book titled \"Atomic Habits 4\" by James Clear, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 11,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "category": "Philosophy",
+    "isbn": "978582069896",
+    "description": "A captivating book titled \"The Alchemist\" by Paulo Coelho, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Power of Now 2",
+    "author": "Eckhart Tolle",
+    "category": "Philosophy",
+    "isbn": "978718448816",
+    "description": "A captivating book titled \"The Power of Now 2\" by Eckhart Tolle, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Road Less Traveled 3",
+    "author": "M. Scott Peck",
+    "category": "Philosophy",
+    "isbn": "978913106359",
+    "description": "A captivating book titled \"The Road Less Traveled 3\" by M. Scott Peck, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck 4",
+    "author": "Mark Manson",
+    "category": "Philosophy",
+    "isbn": "978882502829",
+    "description": "A captivating book titled \"The Subtle Art of Not Giving a F*ck 4\" by Mark Manson, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "category": "Psychology",
+    "isbn": "978868610569",
+    "description": "A captivating book titled \"Thinking, Fast and Slow\" by Daniel Kahneman, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 1,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lean Startup 2",
+    "author": "Eric Ries",
+    "category": "Psychology",
+    "isbn": "978962937104",
+    "description": "A captivating book titled \"The Lean Startup 2\" by Eric Ries, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "How to Win Friends and Influence People 3",
+    "author": "Dale Carnegie",
+    "category": "Psychology",
+    "isbn": "978331189740",
+    "description": "A captivating book titled \"How to Win Friends and Influence People 3\" by Dale Carnegie, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Great Gatsby 4",
+    "author": "F. Scott Fitzgerald",
+    "category": "Psychology",
+    "isbn": "978446170551",
+    "description": "A captivating book titled \"The Great Gatsby 4\" by F. Scott Fitzgerald, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 3,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "category": "Economics",
+    "isbn": "978039689951",
+    "description": "A captivating book titled \"To Kill a Mockingbird\" by Harper Lee, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "1984 2",
+    "author": "George Orwell",
+    "category": "Economics",
+    "isbn": "978762798435",
+    "description": "A captivating book titled \"1984 2\" by George Orwell, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Pride and Prejudice 3",
+    "author": "Jane Austen",
+    "category": "Economics",
+    "isbn": "978184329141",
+    "description": "A captivating book titled \"Pride and Prejudice 3\" by Jane Austen, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Catcher in the Rye 4",
+    "author": "J.D. Salinger",
+    "category": "Economics",
+    "isbn": "978809594185",
+    "description": "A captivating book titled \"The Catcher in the Rye 4\" by J.D. Salinger, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "category": "Politics",
+    "isbn": "978045769851",
+    "description": "A captivating book titled \"The Hobbit\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 2,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lord of the Rings 2",
+    "author": "J.R.R. Tolkien",
+    "category": "Politics",
+    "isbn": "978485600747",
+    "description": "A captivating book titled \"The Lord of the Rings 2\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 11,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone 3",
+    "author": "J.K. Rowling",
+    "category": "Politics",
+    "isbn": "978488283372",
+    "description": "A captivating book titled \"Harry Potter and the Sorcerer's Stone 3\" by J.K. Rowling, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Da Vinci Code 4",
+    "author": "Dan Brown",
+    "category": "Politics",
+    "isbn": "978043621171",
+    "description": "A captivating book titled \"The Da Vinci Code 4\" by Dan Brown, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 13,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "category": "Religion",
+    "isbn": "978771641239",
+    "description": "A captivating book titled \"Gone Girl\" by Gillian Flynn, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 12,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Notebook 2",
+    "author": "Nicholas Sparks",
+    "category": "Religion",
+    "isbn": "978081792642",
+    "description": "A captivating book titled \"The Notebook 2\" by Nicholas Sparks, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 3,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Dune 3",
+    "author": "Frank Herbert",
+    "category": "Religion",
+    "isbn": "978277102516",
+    "description": "A captivating book titled \"Dune 3\" by Frank Herbert, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 14,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Neuromancer",
+    "author": "William Gibson",
+    "category": "Travel",
+    "isbn": "978154406449",
+    "description": "A captivating book titled \"Neuromancer\" by William Gibson, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Name of the Wind 2",
+    "author": "Patrick Rothfuss",
+    "category": "Travel",
+    "isbn": "978567866230",
+    "description": "A captivating book titled \"The Name of the Wind 2\" by Patrick Rothfuss, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Steve Jobs 3",
+    "author": "Walter Isaacson",
+    "category": "Travel",
+    "isbn": "978554433571",
+    "description": "A captivating book titled \"Steve Jobs 3\" by Walter Isaacson, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "category": "Cooking",
+    "isbn": "978531313238",
+    "description": "A captivating book titled \"Sapiens\" by Yuval Noah Harari, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Educated 2",
+    "author": "Tara Westover",
+    "category": "Cooking",
+    "isbn": "978405407985",
+    "description": "A captivating book titled \"Educated 2\" by Tara Westover, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Atomic Habits 3",
+    "author": "James Clear",
+    "category": "Cooking",
+    "isbn": "978836215742",
+    "description": "A captivating book titled \"Atomic Habits 3\" by James Clear, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "category": "Art",
+    "isbn": "978859808926",
+    "description": "A captivating book titled \"The Alchemist\" by Paulo Coelho, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Power of Now 2",
+    "author": "Eckhart Tolle",
+    "category": "Art",
+    "isbn": "978244759167",
+    "description": "A captivating book titled \"The Power of Now 2\" by Eckhart Tolle, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Road Less Traveled 3",
+    "author": "M. Scott Peck",
+    "category": "Art",
+    "isbn": "978163065160",
+    "description": "A captivating book titled \"The Road Less Traveled 3\" by M. Scott Peck, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "category": "Music",
+    "isbn": "978614383593",
+    "description": "A captivating book titled \"The Subtle Art of Not Giving a F*ck\" by Mark Manson, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Thinking, Fast and Slow 2",
+    "author": "Daniel Kahneman",
+    "category": "Music",
+    "isbn": "978137202692",
+    "description": "A captivating book titled \"Thinking, Fast and Slow 2\" by Daniel Kahneman, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 13,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lean Startup 3",
+    "author": "Eric Ries",
+    "category": "Music",
+    "isbn": "978020521434",
+    "description": "A captivating book titled \"The Lean Startup 3\" by Eric Ries, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "category": "Health",
+    "isbn": "978683009433",
+    "description": "A captivating book titled \"How to Win Friends and Influence People\" by Dale Carnegie, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Great Gatsby 2",
+    "author": "F. Scott Fitzgerald",
+    "category": "Health",
+    "isbn": "978324402801",
+    "description": "A captivating book titled \"The Great Gatsby 2\" by F. Scott Fitzgerald, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "To Kill a Mockingbird 3",
+    "author": "Harper Lee",
+    "category": "Health",
+    "isbn": "978257586535",
+    "description": "A captivating book titled \"To Kill a Mockingbird 3\" by Harper Lee, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "category": "Sports",
+    "isbn": "978098943502",
+    "description": "A captivating book titled \"1984\" by George Orwell, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Pride and Prejudice 2",
+    "author": "Jane Austen",
+    "category": "Sports",
+    "isbn": "978371267788",
+    "description": "A captivating book titled \"Pride and Prejudice 2\" by Jane Austen, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Catcher in the Rye 3",
+    "author": "J.D. Salinger",
+    "category": "Sports",
+    "isbn": "978675295339",
+    "description": "A captivating book titled \"The Catcher in the Rye 3\" by J.D. Salinger, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "category": "Technology",
+    "isbn": "978065603432",
+    "description": "A captivating book titled \"The Hobbit\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lord of the Rings 2",
+    "author": "J.R.R. Tolkien",
+    "category": "Technology",
+    "isbn": "978654784972",
+    "description": "A captivating book titled \"The Lord of the Rings 2\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 3,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone 3",
+    "author": "J.K. Rowling",
+    "category": "Technology",
+    "isbn": "978621718929",
+    "description": "A captivating book titled \"Harry Potter and the Sorcerer's Stone 3\" by J.K. Rowling, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "category": "Environment",
+    "isbn": "978100569303",
+    "description": "A captivating book titled \"The Da Vinci Code\" by Dan Brown, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 13,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Gone Girl 2",
+    "author": "Gillian Flynn",
+    "category": "Environment",
+    "isbn": "978840505344",
+    "description": "A captivating book titled \"Gone Girl 2\" by Gillian Flynn, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Notebook 3",
+    "author": "Nicholas Sparks",
+    "category": "Environment",
+    "isbn": "978899532960",
+    "description": "A captivating book titled \"The Notebook 3\" by Nicholas Sparks, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "category": "Education",
+    "isbn": "978575057132",
+    "description": "A captivating book titled \"Dune\" by Frank Herbert, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 11,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Neuromancer 2",
+    "author": "William Gibson",
+    "category": "Education",
+    "isbn": "978448761799",
+    "description": "A captivating book titled \"Neuromancer 2\" by William Gibson, exploring various themes and ideas.",
+    "availableCopies": 5,
+    "totalCopies": 5,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Name of the Wind 3",
+    "author": "Patrick Rothfuss",
+    "category": "Education",
+    "isbn": "978762530885",
+    "description": "A captivating book titled \"The Name of the Wind 3\" by Patrick Rothfuss, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 12,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "category": "Law",
+    "isbn": "978205980121",
+    "description": "A captivating book titled \"Steve Jobs\" by Walter Isaacson, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Sapiens 2",
+    "author": "Yuval Noah Harari",
+    "category": "Law",
+    "isbn": "978286766915",
+    "description": "A captivating book titled \"Sapiens 2\" by Yuval Noah Harari, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 9,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Educated 3",
+    "author": "Tara Westover",
+    "category": "Law",
+    "isbn": "978407219943",
+    "description": "A captivating book titled \"Educated 3\" by Tara Westover, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 6,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "category": "Medicine",
+    "isbn": "978227193815",
+    "description": "A captivating book titled \"Atomic Habits\" by James Clear, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Alchemist 2",
+    "author": "Paulo Coelho",
+    "category": "Medicine",
+    "isbn": "978904327186",
+    "description": "A captivating book titled \"The Alchemist 2\" by Paulo Coelho, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Power of Now 3",
+    "author": "Eckhart Tolle",
+    "category": "Medicine",
+    "isbn": "978889217461",
+    "description": "A captivating book titled \"The Power of Now 3\" by Eckhart Tolle, exploring various themes and ideas.",
+    "availableCopies": 3,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Road Less Traveled",
+    "author": "M. Scott Peck",
+    "category": "Engineering",
+    "isbn": "978143617118",
+    "description": "A captivating book titled \"The Road Less Traveled\" by M. Scott Peck, exploring various themes and ideas.",
+    "availableCopies": 7,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck 2",
+    "author": "Mark Manson",
+    "category": "Engineering",
+    "isbn": "978701507751",
+    "description": "A captivating book titled \"The Subtle Art of Not Giving a F*ck 2\" by Mark Manson, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 4,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Thinking, Fast and Slow 3",
+    "author": "Daniel Kahneman",
+    "category": "Engineering",
+    "isbn": "978148543178",
+    "description": "A captivating book titled \"Thinking, Fast and Slow 3\" by Daniel Kahneman, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lean Startup",
+    "author": "Eric Ries",
+    "category": "Agriculture",
+    "isbn": "978683755792",
+    "description": "A captivating book titled \"The Lean Startup\" by Eric Ries, exploring various themes and ideas.",
+    "availableCopies": 6,
+    "totalCopies": 8,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "How to Win Friends and Influence People 2",
+    "author": "Dale Carnegie",
+    "category": "Agriculture",
+    "isbn": "978351002852",
+    "description": "A captivating book titled \"How to Win Friends and Influence People 2\" by Dale Carnegie, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 3,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Great Gatsby 3",
+    "author": "F. Scott Fitzgerald",
+    "category": "Agriculture",
+    "isbn": "978284619263",
+    "description": "A captivating book titled \"The Great Gatsby 3\" by F. Scott Fitzgerald, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "category": "Mythology",
+    "isbn": "978835536877",
+    "description": "A captivating book titled \"To Kill a Mockingbird\" by Harper Lee, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 2,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "1984 2",
+    "author": "George Orwell",
+    "category": "Mythology",
+    "isbn": "978195274964",
+    "description": "A captivating book titled \"1984 2\" by George Orwell, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 11,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Pride and Prejudice 3",
+    "author": "Jane Austen",
+    "category": "Mythology",
+    "isbn": "978576572846",
+    "description": "A captivating book titled \"Pride and Prejudice 3\" by Jane Austen, exploring various themes and ideas.",
+    "availableCopies": 8,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "category": "Folklore",
+    "isbn": "978539792138",
+    "description": "A captivating book titled \"The Catcher in the Rye\" by J.D. Salinger, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 2,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Hobbit 2",
+    "author": "J.R.R. Tolkien",
+    "category": "Folklore",
+    "isbn": "978132481724",
+    "description": "A captivating book titled \"The Hobbit 2\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 10,
+    "totalCopies": 10,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Lord of the Rings 3",
+    "author": "J.R.R. Tolkien",
+    "category": "Folklore",
+    "isbn": "978986585027",
+    "description": "A captivating book titled \"The Lord of the Rings 3\" by J.R.R. Tolkien, exploring various themes and ideas.",
+    "availableCopies": 2,
+    "totalCopies": 3,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "category": "Anthropology",
+    "isbn": "978853208028",
+    "description": "A captivating book titled \"Harry Potter and the Sorcerer's Stone\" by J.K. Rowling, exploring various themes and ideas.",
+    "availableCopies": 4,
+    "totalCopies": 7,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "The Da Vinci Code 2",
+    "author": "Dan Brown",
+    "category": "Anthropology",
+    "isbn": "978565718077",
+    "description": "A captivating book titled \"The Da Vinci Code 2\" by Dan Brown, exploring various themes and ideas.",
+    "availableCopies": 9,
+    "totalCopies": 12,
+    "addedBy": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Gone Girl 3",
+    "author": "Gillian Flynn",
+    "category": "Anthropology",
+    "isbn": "978534707771",
+    "description": "A captivating book titled \"Gone Girl 3\" by Gillian Flynn, exploring various themes and ideas.",
+    "availableCopies": 1,
+    "totalCopies": 2,
+    "addedBy": "507f1f77bcf86cd799439011"
+  }
+]

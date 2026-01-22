@@ -29,11 +29,11 @@ const Books = () => {
             return;
         }
            const url =Server_URL + 'borrow/request-issue/'+bookid;
-           const response = await axios.post(`${Server_URL}books/borrow/request-issue/${bookid}`,{}, {
-            headers: {
-              Authorization: `Bearer ${authToken}`,
-            },
-          });
+           const response = await axios.post(`${Server_URL}api/books/borrow/request-issue/${bookid}`, {}, {
+  headers: {
+    Authorization: `Bearer ${authToken}`,
+  },
+});
 
           // alert(response.data);
           const {error,message} = response.data;
@@ -58,7 +58,7 @@ const Books = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    axios.get(`${Server_URL}books`)
+    axios.get(`${Server_URL}api/books`)
       .then((response) => {
         if (!response.data.error) {
           setBooks(response.data.books);
@@ -151,7 +151,7 @@ const Books = () => {
                       className="card-image"
                       alt={book.title}
                       onError={(e) => {
-                        e.target.src = "https://via.placeholder.com/150x200?text=No+Cover";
+                        e.target.src = Server_URL + "/uploads/default-book-cover.svg";
                       }}
                     />
                     <div className="book-badge">{book.category}</div>

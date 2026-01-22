@@ -10,9 +10,8 @@ const BookSchema = new Schema({
     totalCopies: { type: Number, required: true },
     addedBy: { type: Schema.Types.ObjectId, ref: 'User',required: true },
     coverImage: { type: String },
-    cloudinaryId: { type: String, required: true },
     price: {type:Number},
     createdAt: { type: Date, default: Date.now }
-}) 
+})
 
 module.exports = {BookSchema};

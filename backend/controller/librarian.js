@@ -1,6 +1,5 @@
 const { UserModel } = require("../model/UserModel");
 const bcrypt = require("bcryptjs");
-const JWT_SECRET = "12345@abcd12";
 const jwt = require("jsonwebtoken");
 const { BorrowModel } = require("../model/BorrowModel");
 const { BookModel } = require("../model/BookModel");

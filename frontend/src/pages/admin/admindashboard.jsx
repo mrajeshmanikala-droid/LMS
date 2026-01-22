@@ -59,7 +59,7 @@ const AdminDashboard = () => {
 
   async function getBooks() {
     try {
-      const url = Server_URL + "books";
+      const url = Server_URL + "api/books";
       const result = await axios.get(url);
       const { error, message } = result.data;
       if (error) {
@@ -108,7 +108,7 @@ const AdminDashboard = () => {
 
   async function getLatestBooks() {
     try {
-      const url = Server_URL + 'books/new';
+      const url = Server_URL + 'api/books/new';
       const result = await axios.get(url);
       const {error, message} = result.data;
       if (error) {

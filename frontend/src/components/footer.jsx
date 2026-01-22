@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="footer-column">
             <h3 className="footer-heading">About Us</h3>
             <p className="footer-about-text">
-              The College Library serves as the academic hub of our institution, 
+              BookNest as the academic hub of our institution, 
               providing resources and services to support learning, teaching, 
               and research for our students and faculty.
             </p>

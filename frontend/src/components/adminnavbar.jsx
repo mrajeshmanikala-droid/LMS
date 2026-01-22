@@ -18,12 +18,12 @@ export default function AdminNavbar(){
     return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
     <div className="container">
-     
+
       <Link className="navbar-brand fw-bold" to="/admin">
-        📚 AGC Library
+        📚 BookNest
       </Link>
 
-    
+
       <button
         className="navbar-toggler"
         type="button"
@@ -39,12 +39,12 @@ export default function AdminNavbar(){
             <Link className="nav-link" to="/admin">Dashboard</Link>
           </li>
           <li className="nav-item dropdown">
-  <Link 
-    className="nav-link dropdown-toggle" 
-    to="#" 
-    id="navbarDropdown" 
-    role="button" 
-    data-bs-toggle="dropdown" 
+  <Link
+    className="nav-link dropdown-toggle"
+    to="#"
+    id="navbarDropdown"
+    role="button"
+    data-bs-toggle="dropdown"
     aria-expanded="false"
   >
     Books
@@ -76,10 +76,11 @@ export default function AdminNavbar(){
           </li> :null}
         </ul>
 
-       
+
         <ul className="navbar-nav">
           {token ? (
-            
+
+
 
             <li className="nav-item dropdown">
               <button

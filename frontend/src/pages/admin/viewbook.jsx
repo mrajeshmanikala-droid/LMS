@@ -25,7 +25,7 @@ const ViewBooks = () => {
 
   const fetchBooks = async () => {
     try {
-      const url = Server_URL + "books";
+      const url = Server_URL + "api/books";
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` },
       });
@@ -39,7 +39,7 @@ const ViewBooks = () => {
     if (!window.confirm("Are you sure you want to delete this book?")) return;
 
     try {
-      await axios.delete(`${Server_URL}books/delete/${id}`, {
+      await axios.delete(`${Server_URL}api/books/delete/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` },
       });
       showSuccessToast("Book deleted successfully!");
@@ -72,7 +72,7 @@ const ViewBooks = () => {
   const handleUpdate = async () => {
     try {
       
-      await axios.put(`${Server_URL}books/update/${selectedBook._id}`, formData, {
+      await axios.put(`${Server_URL}api/books/update/${selectedBook._id}`, formData, {
         headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` },
       });
   
@@ -97,9 +97,12 @@ const ViewBooks = () => {
           <div className="card book-card">
             <div className="book-image-wrapper">
               <img
-                src={book.coverImage || "https://via.placeholder.com/200"}
+                src={book.coverImage}
                 className="book-image"
                 alt={book.title}
+                onError={(e) => {
+                  e.target.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjY2NjIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5ObyBDb3ZlcjwvdGV4dD48L3N2Zz4=";
+                }}
               />
             </div>
             <div className="card-body">

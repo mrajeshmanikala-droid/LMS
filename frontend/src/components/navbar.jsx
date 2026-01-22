@@ -17,7 +17,7 @@ export default function Navbar(){
     <div className="container">
       
       <Link className="navbar-brand fw-bold" to="/">
-        📚 AGC Library
+        📚 BookNest
       </Link>
 
       
@@ -39,7 +39,7 @@ export default function Navbar(){
             <Link className="nav-link" to="/books">Books</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/category">Category</Link>
+            <Link className="nav-link" to="/category">Categories</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/aboutus">About</Link>

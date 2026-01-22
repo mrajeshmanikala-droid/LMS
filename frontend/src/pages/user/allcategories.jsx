@@ -15,7 +15,7 @@ export default function ViewAllCategories() {
 
   const fetchCategories = async () => {
     try {
-      const url = Server_URL + "books";
+      const url = Server_URL + "api/books";
       const response = await axios.get(url);
       const { error, message, books } = response.data;
 
@@ -109,8 +109,7 @@ export default function ViewAllCategories() {
                         alt={category}
                         onError={(e) => {
                           e.target.onerror = null;
-                          e.target.src =
-                            "https://via.placeholder.com/300x400?text=No+Image";
+                          e.target.src = Server_URL + "/uploads/default-book-cover.svg";
                         }}
                       />
                       <div className="all-categories-card-body">
