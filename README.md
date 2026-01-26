@@ -89,7 +89,7 @@ A complete Library Management System built with MongoDB, Express.js, React.js, a
 Clone the project repository to your local machine using the following command:
 
 ```bash
-git https://github.com/mrajeshmanikala-droid/LMS.gi
+git https://github.com/mrajeshmanikala-droid/LMS.git
 ```
 
 ### 2. Install Dependencies
