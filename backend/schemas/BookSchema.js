@@ -1,4 +1,4 @@
-const {Schema} = require("mongoose");
+const { Schema } = require("mongoose");
 
 const BookSchema = new Schema({
     title: { type: String, required: true },
@@ -8,10 +8,14 @@ const BookSchema = new Schema({
     description: { type: String, required: true },
     availableCopies: { type: Number, required: true },
     totalCopies: { type: Number, required: true },
-    addedBy: { type: Schema.Types.ObjectId, ref: 'User',required: true },
+    addedBy: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     coverImage: { type: String },
-    price: {type:Number},
+    price: { type: Number },
+    pages: { type: Number },
+    publishedYear: { type: Number },
+    publisher: { type: String },
+    language: { type: String, default: 'English' },
     createdAt: { type: Date, default: Date.now }
 })
 
-module.exports = {BookSchema};
+module.exports = { BookSchema };

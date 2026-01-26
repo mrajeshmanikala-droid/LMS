@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
 require("dotenv").config();
 
 const users = require("./routes/user.js");
@@ -13,6 +14,9 @@ const app = express();
 
 // ✅ Middlewares
 app.use(express.json());
+
+// ✅ Serve static files from uploads folder
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(cors({
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
@@ -22,7 +26,7 @@ app.use(cors({
     }
     return callback(new Error('Not allowed by CORS'));
   },
-  method:["POST","GET","PUT","DELETE","OPTIONS"],
+  method: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
 
