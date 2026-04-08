@@ -1,9 +1,14 @@
 # 📚 BookNest (MERN Stack)
 
-![MERN Stack](https://img.shields.io/badge/MERN-Full%20Stack-blue)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://library-management-app-karan.vercel.app/)
-
 A complete Library Management System built with MongoDB, Express.js, React.js, and Node.js. Features role-based access control with three user types (Admin, Librarian, Student), book management with Cloudinary image uploads, issue/return tracking, and automated fine calculations.
+
+## 🚀 Quick Start (Demo Mode)
+
+The project is already configured to run locally.
+
+1.  **Frontend**: [http://localhost:5173/](http://localhost:5173/)
+2.  **Backend**: [http://localhost:5000/](http://localhost:5000/)
+
 
 
 ## ✨ Key Features
@@ -72,10 +77,7 @@ A complete Library Management System built with MongoDB, Express.js, React.js, a
 - **API Documentation**: Hopscotch
 - **Version Control**: Git + GitHub
 
-### **Deployment**
-![Render](https://img.shields.io/badge/Backend-Hosted_on_Render-%2300BFFF?logo=render)
-![Vercel](https://img.shields.io/badge/Frontend-Hosted_on_Vercel-%23000000?logo=vercel)
-![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB_Atlas-%2347A248?logo=mongodb)
+
 
 - **Frontend**: Vercel (Edge Network)
 - **Backend**: Render (Node.js Environment)
@@ -118,28 +120,6 @@ npm install
 ```
 ---
 
-### 3. Set Up Environment Variables
-Create a .env file in api and add the following environment variables:
-
-####  BACKEND .env file
-```bash
-EMAIL_USER=your_email_address
-EMAIL_PASS=your_email_password
-EMAIL_SERVICE=your_email_service
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-CLOUD_NAME=your_cloud_name
-CLOUD_API_KEY=your_cloud_api_key
-CLOUD_API_SECRET=your_cloud_api_secret
-
-```
-
-#### FRONTEND .env file
-```bash
-VITE_BACKEND_URL=https://your-backend-url.onrender.com
-
-```
----
 
 ### 4. Start the Development Server
 Once the dependencies are installed and the .env file is set up, you can start the development server with the following command:
@@ -160,6 +140,16 @@ npm run dev
 
 
 
+### 🔑 Demo Credentials
+
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Admin** | `admin@demo.com` | `admin123` |
+| **Librarian** | `librarian@demo.com` | `librarian123` |
+| **Student** | `student@demo.com` | `student123` |
+
+> [!NOTE]
+> Use the **Admin Login** page ([http://localhost:5173/admin-login](http://localhost:5173/admin-login)) for Admin and Librarian accounts.
 
 
 
