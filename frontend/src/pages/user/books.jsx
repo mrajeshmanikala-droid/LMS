@@ -1,10 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./books.css"
 import { useNavigate } from "react-router-dom";
 import { Server_URL } from "../../utils/config";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
+// Safe inline SVG fallback — never triggers a network request, so no error loop
+const FALLBACK_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23adb5bd'%3E📚%3C/text%3E%3Ctext x='50%25' y='62%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23adb5bd'%3ENo Cover Available%3C/text%3E%3C/svg%3E";
+
+// Resolve image URL — handles both full URLs (https://...) and local paths (/uploads/...)
+const getImageUrl = (coverImage) => {
+  if (!coverImage) return FALLBACK_IMAGE;
+  if (coverImage.startsWith('http')) return coverImage;
+  return `${Server_URL}${coverImage.replace(/^\//, '')}`;
+};
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -84,7 +93,7 @@ const Books = () => {
     filterBooks(searchTerm, category);
   };
 
-  const filterBooks = (search, category) => {
+  const filterBooks = useCallback((search, category) => {
     let filtered = books;
     
     if (category !== "All") {
@@ -96,7 +105,20 @@ const Books = () => {
     }
     
     setFilteredBooks(filtered);
-  };
+  }, [books]);
+
+  // Handle image error — only swap once to avoid infinite loop
+  const handleImageError = useCallback((e) => {
+    if (!e.target.dataset.fallback) {
+      e.target.dataset.fallback = "true";
+      e.target.src = FALLBACK_IMAGE;
+    }
+  }, []);
+
+  // Handle image load — add loaded class for fade-in
+  const handleImageLoad = useCallback((e) => {
+    e.target.classList.add("loaded");
+  }, []);
 
 
   return (
@@ -108,7 +130,7 @@ const Books = () => {
           <div className="category-scroll">
             {categories.map((category, index) => (
               <div
-                key={index}
+                key={category}
                 className={`category-item ${
                   selectedCategory === category ? "active" : ""
                 }`}
@@ -143,16 +165,16 @@ const Books = () => {
             </div>
           ) : filteredBooks.length > 0 ? (
             <div className="books-grid">
-              {filteredBooks.map((book, index) => (
-                <div key={index} className="book-card">
+              {filteredBooks.map((book) => (
+                <div key={book._id} className="book-card">
                   <div className="card-image-container">
                     <img
-                      src={book.coverImage}
+                      src={getImageUrl(book.coverImage)}
                       className="card-image"
                       alt={book.title}
-                      onError={(e) => {
-                        e.target.src = Server_URL + "/uploads/default-book-cover.svg";
-                      }}
+                      loading="lazy"
+                      onError={handleImageError}
+                      onLoad={handleImageLoad}
                     />
                     <div className="book-badge">{book.category}</div>
                   </div>

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { Server_URL } from "../../utils/config";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
 export default function Register() {
   const [selectedRole, setSelectedRole] = useState("user");
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -24,13 +26,39 @@ export default function Register() {
       role: selectedRole
     };
 
+    // 1. Register
     const response = await axios.post(
       `${Server_URL}users/register`,
       formData
     );
 
     console.log("Register Response:", response.data);
-    showSuccessToast("Registration Successful!");
+    showSuccessToast("Registration Successful! Logging you in...");
+
+    // 2. Auto-login with the same credentials
+    try {
+      const loginResponse = await axios.post(`${Server_URL}users/login`, {
+        email: data.email,
+        password: data.password
+      });
+
+      const { token, user } = loginResponse.data;
+      localStorage.setItem("authToken", token);
+      localStorage.setItem("role", user.role);
+
+      // 3. Redirect based on role
+      if (user.role === "admin" || user.role === "librarian") {
+        navigate("/admin");
+      } else {
+        navigate("/");
+      }
+    } catch (loginError) {
+      // Registration succeeded but auto-login failed — send to login page
+      console.error("Auto-login failed:", loginError);
+      showSuccessToast("Registered! Please log in.");
+      navigate("/login");
+    }
+
     reset();
   } catch (error) {
     console.error("Register Error:", error.response?.data || error.message);

@@ -9,6 +9,7 @@ const books = require("./routes/books.js");
 const admin = require("./routes/admin.js");
 const librarian = require("./routes/librarian.js");
 const home = require("./routes/home.js");
+const { autoSeed } = require("./autoSeed.js");
 
 const app = express();
 
@@ -41,14 +42,18 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-// ✅ MongoDB FIRST, server AFTER
+// ✅ MongoDB FIRST, auto-seed, then server
 const PORT = process.env.PORT || 5001;
 const uri = process.env.MONGO_URI;
 
 mongoose
   .connect(uri)
-  .then(() => {
+  .then(async () => {
     console.log("✅ MongoDB Connected");
+    
+    // ✅ Auto-sync book data from seedData.js
+    await autoSeed();
+    
     app.listen(PORT, () => {
       console.log(` Server running on port ${PORT}`);
     });
@@ -56,3 +61,4 @@ mongoose
   .catch((err) => {
     console.error(" MongoDB connection error:", err);
   });
+

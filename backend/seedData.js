@@ -1,8 +1,16 @@
-const mongoose = require('mongoose');
-const { BookModel } = require('./model/BookModel');
-require('dotenv').config();
+/**
+ * Seed Data: Master list of all books.
+ * 
+ * TO ADD/EDIT BOOKS:
+ * 1. Add or modify entries below
+ * 2. Deploy or restart the server
+ * 3. The auto-seeder will automatically sync changes to the database
+ * 
+ * IMPORTANT: ISBN is the unique key. Do NOT change ISBNs of existing books.
+ * You CAN safely change: title, author, category, description, coverImage, price
+ */
 
-const sampleBooks = [
+const seedBooks = [
   // ==================== FICTION ====================
   {
     title: "The Great Gatsby",
@@ -1260,35 +1268,4 @@ const sampleBooks = [
   }
 ];
 
-async function addSampleBooks() {
-  try {
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log('Connected to MongoDB');
-
-    // Clear existing books
-    await BookModel.deleteMany({});
-    console.log('Cleared existing books');
-
-    // Add sample books
-    const books = await BookModel.insertMany(sampleBooks);
-    console.log(`Added ${books.length} sample books`);
-
-    console.log('Sample books added successfully!');
-    console.log('\nBooks added by category:');
-
-    const categories = [...new Set(sampleBooks.map(b => b.category))];
-    categories.forEach(cat => {
-      const count = sampleBooks.filter(b => b.category === cat).length;
-      console.log(`  ${cat}: ${count} books`);
-    });
-
-  } catch (error) {
-    console.error('Error adding sample books:', error);
-  } finally {
-    await mongoose.connection.close();
-    console.log('\nDatabase connection closed');
-  }
-}
-
-// Run the script
-addSampleBooks();
+module.exports = seedBooks;

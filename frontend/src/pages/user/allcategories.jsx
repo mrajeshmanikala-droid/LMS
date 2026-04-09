@@ -100,16 +100,21 @@ export default function ViewAllCategories() {
                   <div key={index} className="all-categories-card-wrapper">
                     <div className="all-categories-card shadow-sm">
                       <img
-                        src={
-                          filterBooks.find(
+                        src={(() => {
+                          const img = filterBooks.find(
                             (b) => b.category === category
-                          )?.coverImage
-                        }
+                          )?.coverImage;
+                          if (!img) return "";
+                          if (img.startsWith('http')) return img;
+                          return `${Server_URL}${img.replace(/^\//, '')}`;
+                        })()}
                         className="all-categories-card-img"
                         alt={category}
                         onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = Server_URL + "/uploads/default-book-cover.svg";
+                          if (!e.target.dataset.fallback) {
+                            e.target.dataset.fallback = "true";
+                            e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23adb5bd'%3E📚%3C/text%3E%3Ctext x='50%25' y='62%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23adb5bd'%3ENo Cover Available%3C/text%3E%3C/svg%3E";
+                          }
                         }}
                       />
                       <div className="all-categories-card-body">
